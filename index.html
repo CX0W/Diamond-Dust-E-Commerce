@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diamond Dusts</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="img/logo.png" class="logo" alt="Diamond Dusts Logo">
+        </nav>
+        <div class="menu-icon">
+            <i class="fas fa-bars" onclick="toggleMenu()"></i>
+        </div>
+        <ul class="menu">
+            <!-- Your anchor links go here -->
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="shop.html">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="cart.html"><i class="fa-solid fa-cart-shopping" style="color: #c9b487;"></i></a></li>
+            <li class="cancel-button" onclick="closeMenu()">&#10006;</li>
+        </ul>
+
+    </header>
+
+
+    <main>
+        <section class="main-content">
+            <div class="text-content">
+                <h2>The best deals are found here!</h2>
+                <p>Discover our exquisite jewelry collection and find the perfect piece for any occasion.</p>
+                <a href="shop.html" class="shop-button">Shop now!</a>
+            </div>
+            <div class="image-content">
+                <img src="img/model.png" alt="Model wearing our jewelry">
+            </div>
+        </section>
+        <div class="features-bar">
+            <div class="feature">
+                <i class="fas fa-shipping-fast"></i>
+                <h3>Fast Delivery</h3>
+                <p>We offer speedy delivery services to get your jewelry to you quickly.</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-gem"></i>
+                <h3>Premium Quality</h3>
+                <p>Our jewelry is crafted with the finest materials for a luxurious experience.</p>
+            </div>
+            <div class="feature">
+                <i class="fas fa-headset"></i>
+                <h3>24/7 Support</h3>
+                <p>Our customer support team is available around the clock to assist you.</p>
+            </div>
+        </div>
+        <h2 class="section-title">Featured Products</h2>
+        <section class="featured-products">
+            <div class="product">
+                <img src="img/featuredproducts/necklace.jpg" alt="Stunning Diamond Necklace">
+                <h3>Stunning Diamond Necklace</h3>
+                <p>An exquisite diamond necklace that adds elegance to any outfit.</p>
+                <p class="price">$299.99</p>
+                <a href="#" class="add-to-cart" data-name="Stunning Diamond Necklace" data-price="299.99">
+                    <i class="fas fa-cart-plus"></i> Add to Cart
+                </a>
+            </div>
+            <div class="product">
+                <img src="img/featuredproducts/earring.jpg" alt="Elegant Pearl Earrings">
+                <h3>Elegant Pearl Earrings</h3>
+                <p>Beautiful pearl earrings that complement your style with grace.</p>
+                <p class="price">$149.99</p>
+                <a href="cart.html" class="add-to-cart" data-name="Stunning Diamond Necklace" data-price="299.99">
+                    <i class="fas fa-cart-plus"></i> Add to Cart
+                </a>
+            </div>
+            <div class="product">
+                <img src="img/featuredproducts/ring.jpg" alt="Sapphire Gemstone Ring">
+                <h3>Sapphire Gemstone Ring</h3>
+                <p>A stunning sapphire gemstone ring that shines on your finger.</p>
+                <p class="price">$199.99</p>
+                <a href="cart.html" class="add-to-cart" data-name="Sapphire Gemstone Ring" data-price="199.99">
+                    <i class="fas fa-cart-plus"></i> Add to Cart
+                </a>
+            </div>
+            <div class="product">
+                <img src="img/featuredproducts/pearlnecklace.jpg" alt="Classic Pearl Necklace">
+                <h3>Classic Pearl Necklace</h3>
+                <p>A classic pearl necklace that enhances your timeless beauty.</p>
+                <p class="price">$179.99</p>
+                <a href="cart.html" class="add-to-cart" data-name="Classic Pearl Necklace" data-price="179.99">
+                    <i class="fas fa-cart-plus"></i> Add to Cart
+                </a>
+            </div>
+        </section>
+        <div class="banner-sale">
+            <div class="banner-content">
+                <p>Up to <span>50% Off</span></p>
+                <a href="#" class="shop-button">Shop now</a>
+            </div>
+        </div>
+        <div id="bannerContainer">
+            <div class="banner jewelry-banner">
+                <div class="banner-content">
+                    <h2>Classic Jewelry</h2>
+                    <p>Discover timeless elegance</p>
+                    <a href="#" class="explore-button">Explore Now</a>
+                </div>
+            </div>
+            <div class="banner jewelry-banner">
+                <div class="banner-content">
+                    <h2>Modern Jewelry</h2>
+                    <p>Explore contemporary designs</p>
+                    <a href="#" class="explore-button">Explore Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="newsletter-banner">
+            <div class="banner-content">
+                <p>Sign up for our newsletter and get exclusive offers!</p>
+                <form class="newsletter-form">
+                    <input type="email" id="email" name="email" placeholder="Your email">
+                    <button type="submit" class="subscribe-button">Subscribe</button>
+                </form>
+            </div>
+
+        </div>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <p>123 Imaginary Street</p>
+                <p>New York, NY 10001</p>
+                <p>Email: info@yourjewelrystore.com</p>
+                <p>Phone: +1 (123) 456-7890</p>
+            </div>
+            <div class="footer-links">
+                <a href="#" class="footer-link">Privacy Policy</a>
+                <a href="#" class="footer-link">Terms of Service</a>
+                <a href="#" class="footer-link">Refund Policy</a>
+            </div>
+            <div class="social-links">
+                <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+        <p class="footer-copyright">&copy; 2023 Diamond Dusts</p>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const addToCartLinks = document.querySelectorAll(".add-to-cart");
+            const cart = [];
+
+            addToCartLinks.forEach((link) => {
+                link.addEventListener("click", function (e) {
+                    e.preventDefault();
+                    const productName = link.getAttribute("data-name");
+                    const productPrice = parseFloat(link.getAttribute("data-price"));
+
+                    // Add the product to the cart
+                    cart.push({ name: productName, price: productPrice });
+
+                    // Encode cart data as a JSON string
+                    const cartData = JSON.stringify(cart);
+
+                    // Update the cart link to pass the cart data as a URL parameter
+                    const cartLink = document.querySelector(".fa-cart-shopping").parentElement;
+                    cartLink.href = `cart.html?cartData=${encodeURIComponent(cartData)}`;
+
+                    // Display a message or update UI to indicate the product was added to the cart
+                    alert(`${productName} added to cart!`);
+                });
+            });
+        });
+      
+        document.addEventListener("DOMContentLoaded", function () {
+            const mobileMenu = document.querySelector(".mobile-menu");
+            const menuToggle = document.getElementById("menu-toggle");
+
+            menuToggle.addEventListener("click", function () {
+                mobileMenu.classList.toggle("hidden");
+            });
+        });
+        function toggleMenu() {
+            const menu = document.querySelector('.menu');
+            menu.classList.toggle('open');
+        }
+
+        function closeMenu() {
+            const menu = document.querySelector('.menu');
+            menu.classList.remove('open');
+        }
+
+
+
+    </script>
+
+
+
+</body>
+</html>

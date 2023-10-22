@@ -1,0 +1,330 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #f4f4f4 50%, #fff 50%);
+    font-family: 'Gill Sans', sans-serif;
+}
+
+header {
+    background-color: #111;
+    color: #c9b487;
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 150px;
+}
+
+.menu-icon {
+    font-size: 24px;
+    color: #c9b487;
+    cursor: pointer;
+    display: none; /* Initially hide the menu icon for larger screens */
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+li {
+    margin-right: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: #c9b487;
+    transition: color 0.3s;
+}
+
+    a:hover {
+        color: #fff;
+    }
+
+
+main {
+    background-color: #e0e0e0;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    min-height: 80vh; 
+}
+
+main h2 {
+        font-size: 28px;
+        font-weight: bold;
+        text-transform: uppercase;
+        color: #c9b487;
+        background-color: #111;
+        padding: 10px;
+        margin: 20px 0;
+        text-align: center;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+main p {
+        font-size: 18px;
+        line-height: 1.6;
+        margin: 15px 0;
+}
+
+/* Cart Items Styling */
+ul#cart-items li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+ul#cart-items li img {
+        width: 60px;
+        height: 60px;
+        object-fit: cover;
+        margin-right: 10px;
+}
+
+ul#cart-items li p {
+        margin: 0;
+}
+
+p#total-price {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+ul#cart-items li:hover {
+    transform: scale(1.02);
+    transition: transform 0.2s;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #111;
+    color: #c9b487;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.footer p {
+    margin: 0;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.contact-info {
+    text-align: left;
+}
+
+    .contact-info p {
+        margin: 5px 0;
+    }
+
+.social-links {
+    display: flex;
+    gap: 20px;
+}
+
+.social-icon {
+    font-size: 20px;
+    color: #c9b487;
+    text-decoration: none;
+}
+
+.footer-links {
+    margin: 10px 0;
+}
+
+.footer-link {
+    text-decoration: none;
+    color: #c9b487;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+    .footer-link:hover {
+        color: #fff;
+    }
+
+.footer-copyright {
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+
+#cart-items{
+    flex-direction:column;
+    width:fit-content;
+}
+
+
+/* Responsive Styles for 768px (width) and smaller screens */
+@media screen and (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .contact-info {
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .social-links {
+        margin-top: 10px;
+    }
+
+    .footer-links {
+        text-align: center;
+    }
+
+        .footer-links a {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+
+    header {
+        padding: 10px 0;
+    }
+
+    .logo {
+        width: 100px;
+    }
+
+    nav {
+        display: block;
+        text-align: center;
+    }
+
+    ul {
+        flex-direction: column;
+    }
+
+    li {
+        margin: 10px 0;
+    }
+
+    .menu {
+        display: none; /* Hide the navigation menu by default on small screens */
+    }
+
+    .menu-icon {
+        display: block; /* Show the menu icon for small screens */
+        text-align: right; /* Right-align the menu icon */
+        padding-right: 20px;
+        font-size: 24px;
+    }
+
+    main {
+        padding: 10px;
+    }
+
+    .text-content h2 {
+        font-size: 32px;
+    }
+
+    .text-content p {
+        font-size: 18px;
+    }
+
+    .main-content {
+        flex-direction: column;
+    }
+
+    footer {
+        padding: 10px 0;
+    }
+
+    .contact-info p {
+        font-size: 14px;
+    }
+
+    .social-icon {
+        font-size: 24px;
+    }
+
+    .footer-link {
+        font-size: 16px;
+    }
+
+    .footer-copyright {
+        font-size: 12px;
+    }
+    /*reducing space between sections in mobile versions*/
+    section {
+        margin-bottom: 10px;
+    }
+}
+
+/*Mobile drop down menu styling */
+
+/*logo to he left*/
+.logo {
+    float: left;
+}
+
+.menu-icon {
+    display: none; /*on pcs menu icon should not be visible*/
+}
+/*drop down styling for mobile screen*/
+@media screen and (max-width: 768px) {
+    .menu-icon {
+        display: block;
+    }
+
+    .menu {
+        display: none; /* Initially hide the dropdown menu */
+        position: absolute;
+        background-color: #111;
+        width: 100%;
+        text-align: center;
+        z-index: 1;
+        margin-top: -60px;
+    }
+
+        .menu.open { /*when we click on menu icon, menu finally is visible*/
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 70px;
+            right: 0;
+            background-color: #111;
+            z-index: 1;
+        }
+}
+
+/* initially the cancel button is invisible on pc */
+.cancel-button {
+    display: none;
+    font-size: 20px;
+    color: #c9b487;
+    cursor: pointer;
+    position: absolute;
+    top: 5px;
+    right: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    .cancel-button {
+        display: block; /* Show the cancel button for small screens */
+    }
+}

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Shopping Cart</title>
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="img/logo.png" class="logo" alt="Diamond Dusts Logo">
+        </nav>
+        <div class="menu-icon">
+            <i class="fas fa-bars" onclick="toggleMenu()"></i>
+        </div>
+        <ul class="menu">
+            <!-- Your anchor links go here -->
+            <li><a href="index.html" class="active">Home</a></li>
+            <li><a href="shop.html">Products</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="cart.html"><i class="fa-solid fa-cart-shopping" style="color: #c9b487;"></i></a></li>
+            <li class="cancel-button" onclick="closeMenu()">&#10006;</li>
+        </ul>
+
+    </header>
+
+
+    <main>
+        <h2>Your Shopping Cart</h2>
+        <ul id="cart-items">
+            <!-- Cart items will be displayed here using JavaScript -->
+        </ul>
+        <p>Total Price: $<span id="total-price">0.00</span></p>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="contact-info">
+                <p>123 Imaginary Street</p>
+                <p>New York, NY 10001</p>
+                <p>Email: info@yourjewelrystore.com</p>
+                <p>Phone: +1 (123) 456-7890</p>
+            </div>
+            <div class="footer-links">
+                <a href="#" class="footer-link">Privacy Policy</a>
+                <a href="#" class="footer-link">Terms of Service</a>
+                <a href="#" class="footer-link">Refund Policy</a>
+            </div>
+            <div class="social-links">
+                <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+            </div>
+        </div>
+        <p class="footer-copyright">&copy; 2023 Diamond Dusts</p>
+    </footer>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const cartItemsElement = document.getElementById("cart-items");
+            const totalPriceElement = document.getElementById("total-price");
+
+            // Check if there are cart items in the URL parameters
+            const urlParams = new URLSearchParams(window.location.search);
+            if (urlParams.has("cartData")) {
+                // Get cart data from URL parameter and decode it
+                const cartData = JSON.parse(decodeURIComponent(urlParams.get("cartData")));
+
+                // Initialize total price
+                let totalPrice = 0;
+
+                // Iterate through cart items and add them to the cart page as a list
+                cartData.forEach((item) => {
+                    const listItem = document.createElement("li"); // Create a new list item
+                    listItem.innerHTML = `${item.name} - $${item.price.toFixed(2)}`;
+                    cartItemsElement.appendChild(listItem); // Append the new list item
+
+                    // Update the total price
+                    totalPrice += item.price;
+                });
+
+                // Display the total price
+                totalPriceElement.textContent = totalPrice.toFixed(2);
+            }
+        });
+       
+        function toggleMenu() {
+            const menu = document.querySelector('.menu');
+            menu.classList.toggle('open');
+        }
+
+        function closeMenu() {
+            const menu = document.querySelector('.menu');
+            menu.classList.remove('open');
+        }
+
+
+
+    </script>
+
+</body>
+</html>
